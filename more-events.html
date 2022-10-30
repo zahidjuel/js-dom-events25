@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+
+<body>
+    <h1>Explore more Events</h1>
+    <button id="btn-more">Events</button>
+    <input type="text" name="" id="text-field">
+    <br><br>
+    <!-- create a comment box; -->
+    <p id="default-text">Default Text</p>
+    <textarea name="" id="text-field2" cols="30" rows="5"></textarea>
+    <button id="btn-post">Post</button>
+    <script>
+        document.getElementById('btn-more').addEventListener('mousemove', function () {
+            console.log('Event button triggerd');
+        });
+        /*  document.getElementById('text-field').addEventListener('focus', function () {
+             console.log("Event triggered inside the field");
+         });
+         document.getElementById('text-field').addEventListener('blur', function () {
+             console.log("Event triggered inside the field blur");
+         }); */
+      /*   document.getElementById('text-field').addEventListener('keydown', function (event) {
+            // console.log("Event triggered inside the field keydown");
+            console.log(event.target.value);
+        });
+        document.getElementById('text-field').addEventListener('keypress', function (event) {
+            // console.log("Event triggered inside the field keydown");
+            console.log(event.target.value);
+        }); */
+        document.getElementById('text-field').addEventListener('keyup', function (event) {
+            // console.log("Event triggered inside the field keydown");
+            console.log(event.target.value);
+        });
+
+        // create a comment box;
+        document.getElementById('btn-post').addEventListener('click', function () {
+            // console.log('Bangladesh');
+            const textField2 = document.getElementById('text-field2');
+            // console.log(textField2.value);
+            document.getElementById('default-text').innerText = textField2.value;
+            textField2.value = '';
+        })
+    </script>
+</body>
+
+</html>

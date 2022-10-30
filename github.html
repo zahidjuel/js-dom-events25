@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github</title>
+</head>
+
+<body>
+    <h1 id="sceret-info">My secret info</h1>
+    <input type="text" name="" id="">
+    <button id="btn-delete">Delete</button>
+    <br><br>
+    <h1 id="clear-text">Clear Download</h1>
+    <textarea name="" id="text-field" cols="30" rows="5" placeholder="Please type here CONFIRM text"></textarea>
+    <button id="btn-confirm">Confirm Delete</button>
+    <script>
+        document.getElementById('btn-delete').addEventListener('click', function () {
+            const secretInfo = document.getElementById('sceret-info');
+            secretInfo.style.display = 'none';
+        });
+        document.getElementById('btn-confirm').addEventListener('click', function () {
+            const textField = document.getElementById('text-field');
+            if (textField.value == 'CONFIRM') {
+                document.getElementById('clear-text').style.display = 'none';
+                textField.value = '';
+            };
+
+        })
+    </script>
+</body>
+
+</html>
